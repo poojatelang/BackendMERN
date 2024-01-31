@@ -7,7 +7,7 @@
       },
     
       {
-        "src": "dist/",
+        "src": "dist/**",
         "use": "@vercel/static"
       }
     ],
@@ -24,8 +24,13 @@
       },
       {
        
-        "src": "/(.*)",
-        "dest": "build/"
+        "src": "/",
+        "dest": "build/index.html"
+      },
+      {
+       
+        "src": "/(.+)",
+        "dest": "build/$1"
       }
     ]
   }
